@@ -31,7 +31,9 @@ export const router = createBrowserRouter([
         path: "/productDetails/:id",
         element: <EachProductDetails></EachProductDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://essential-mart-server.vercel.app/products/${params.id}`
+          ),
       },
     ],
   },
